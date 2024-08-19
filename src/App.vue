@@ -1,23 +1,29 @@
 <template>
   <v-app>
-    <v-main>
-      <HelloWorld/>
-    </v-main>
+    <AppBar></AppBar>
+    <div class="main-content">
+      <router-view/>
+    </div>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppBar from './components/AppBar.vue';
 
 export default {
   name: 'App',
-
   components: {
-    HelloWorld,
+    AppBar
   },
 
   data: () => ({
-    //
+
   }),
 }
 </script>
+
+<style>
+.main-content {
+  padding-top: 64px;
+}
+</style>
